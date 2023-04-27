@@ -21,6 +21,8 @@ const truncateStr = (fullStr, strLen) => {
         fullStr.substring(fullStr.lenth - backChars)
     )
 }
+
+
 export default function NFTBox({ price, nftAddress, tokenId, marketplaceAddress, seller }) {
     const [imageURI, setImageURI] = useState("")
     const { isWeb3Enabled, account } = useMoralis()
@@ -69,6 +71,8 @@ export default function NFTBox({ price, nftAddress, tokenId, marketplaceAddress,
         // using the image tag from the tokenURI, get the image
         // have the world using IPFS
     }
+
+
 
     useEffect(() => {
         if(isWeb3Enabled){

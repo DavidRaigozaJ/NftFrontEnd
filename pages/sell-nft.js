@@ -13,7 +13,7 @@ import { useEffect, useState } from "react"
 export default function Home() {
   const {chainId, account, isWeb3Enabled } = useMoralis()
   const chainString = chainId ? parseInt(chainId).toString : "31337"
-  const marketplaceAddress = networkMapping[chainString].MarketPlace[0]
+  const marketplaceAddress = networkMapping[chainString]?.MarketPlace?.[1] ?? "default value"
   const disparch = useNotification()
   const [proceeds, setProceeds] = useState("0")
 
